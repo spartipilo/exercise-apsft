@@ -38,7 +38,7 @@ function Table({ data, changeTable }) {
                       : { display: "block" }
                   }
                 >
-                  {moment(el?.date).format("LL", "it-IT")}
+                  {moment(el?.date).format("ll")}
                 </td>
               </>
             )}

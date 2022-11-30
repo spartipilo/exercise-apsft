@@ -102,7 +102,7 @@ function App() {
     <>
       <div>
         <select
-          className="form-select w-25 m-4 shadow-sm"
+          className="form-select w-25 m-4 shadow-sm text-truncate"
           defaultValue={"1"}
           onChange={(event) => selectGroup(event.target.value)}
         >

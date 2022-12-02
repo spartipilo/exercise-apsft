@@ -20,17 +20,16 @@ function Table({ data, changeTable }) {
               </th>
             </>
           )}
-
           <th scope="col">Hours</th>
         </tr>
       </thead>
       <tbody>
         {data.map((el, index) => (
           <tr key={index}>
-            <td>{el.project?.name || el?.name}</td>
+            <td>{el.project.name}</td>
             {changeTable !== 2 && (
               <>
-                <td>{el.employee?.name || el?.employee}</td>
+                <td>{el.employee.name}</td>
                 <td
                   style={
                     changeTable === 3
@@ -38,11 +37,11 @@ function Table({ data, changeTable }) {
                       : { display: "block" }
                   }
                 >
-                  {moment(el?.date).format("ll")}
+                  {moment(el.date).format("ll")}
                 </td>
               </>
             )}
-            <td>{el?.hours}</td>
+            <td>{el.hours}</td>
           </tr>
         ))}
       </tbody>
